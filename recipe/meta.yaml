@@ -1,5 +1,5 @@
 {% set name = "tracktable-data" %}
-{% set version = "1.7.0" %}
+{% set version = "1.7.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: c5fab2fab03ca8b2c79c28c99c485a841e82a7d08a7813fedeb31f7d9ef6923e
+  sha256: 47b18da4505026c0162bdbda22e5064a825f95da44a0d21589ce402ee444120c
 
 build:
   noarch: python
