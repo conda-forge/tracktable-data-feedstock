@@ -13,10 +13,12 @@ build:
   number: 3
   script: "{{ PYTHON }} -m pip install . -vv"
 
+
 requirements:
   host:
     - python >=3.5
     - pip
+    - python-build
     - setuptools
   run:
     - python >=3.5
