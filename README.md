@@ -1,11 +1,11 @@
-About tracktable-data
-=====================
+About tracktable-data-feedstock
+===============================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/tracktable-data-feedstock/blob/main/LICENSE.txt)
 
 Home: https://tracktable.sandia.gov/
 
 Package license: [BSD-2-Clause](https://opensource.org/licenses/BSD-2-Clause)
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/tracktable-data-feedstock/blob/main/LICENSE.txt)
 
 Summary: Trajectory Analysis and Rendering
 
@@ -151,5 +151,5 @@ Feedstock Maintainers
 =====================
 
 * [@atwilso](https://github.com/atwilso/)
-* [@mjfadem](https://github.com/mjfadem/)
+* [@pabaxley](https://github.com/pabaxley/)
 

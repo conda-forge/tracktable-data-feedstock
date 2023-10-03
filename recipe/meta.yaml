@@ -1,14 +1,13 @@
 {% set name = "tracktable-data" %}
-{% set version = "1.7.1" %}
+{% set version = "1.7.2" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 47b18da4505026c0162bdbda22e5064a825f95da44a0d21589ce402ee444120c
-
+  url: https://github.com/sandialabs/tracktable-data/archive/refs/tags/v{{ version }}.tar.gz
+  sha256: 6d3c559cb99785d4623cc39701dde56f083d09d3631840c601726bef83b74f0f
 build:
   noarch: python
   number: 0
@@ -53,5 +52,4 @@ about:
 extra:
   recipe-maintainers:
     - pabaxley
-    - mjfadem
     - atwilso
