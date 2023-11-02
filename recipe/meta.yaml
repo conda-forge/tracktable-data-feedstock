@@ -5,12 +5,14 @@ package:
   name: {{ name|lower }}
   version: {{ version }}
 
+# We check out the repository instead of pulling a tarball so that the
+# Git LFS references will be resolved.
 source:
-  url: https://github.com/sandialabs/tracktable-data/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 6d3c559cb99785d4623cc39701dde56f083d09d3631840c601726bef83b74f0f
+  git_url: https://github.com/sandialabs/tracktable-data
+  git_rev: v1.7.2
 build:
   noarch: python
-  number: 3
+  number: 4
   script: "{{ PYTHON }} -m pip install . -vv"
 
 
