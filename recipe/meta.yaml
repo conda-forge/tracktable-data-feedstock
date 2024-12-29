@@ -13,18 +13,18 @@ source:
 
 build:
   noarch: python
-  number: 1
+  number: 2
   script: "{{ PYTHON }} -m pip install . -vv"
 
 
 requirements:
   host:
-    - python >=3.9
+    - python {{ python_min }}
     - pip
     - python-build
     - setuptools
   run:
-    - python >=3.9
+    - python >={{ python_min }}
 
 test:
   imports:
@@ -37,6 +37,7 @@ test:
     - python -c "from tracktable_data.data import retrieve; files = retrieve(); assert len(files) > 0"
   requires:
     - pip
+    - python {{ python_min }}
   commands:
     - pip check
 
