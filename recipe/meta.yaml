@@ -1,5 +1,5 @@
 {% set name = "tracktable-data" %}
-{% set version = "1.7.3" %}
+{% set version = "1.7.3.1" %}
 
 package:
   name: {{ name|lower }}
@@ -8,8 +8,8 @@ package:
 # We check out the repository instead of pulling a tarball so that the
 # Git LFS references will be resolved.
 source:
-  url: https://github.com/sandialabs/tracktable-data/archive/refs/tags/v1.7.3.tar.gz
-  sha256: a5ef2dbdb6a50ce91589563be001ba27c11caeeb223641474ae043b84a04e6f2
+  git_url: https://github.com/sandialabs/tracktable-data
+  git_rev: v1.7.3.1
 
 build:
   noarch: python
