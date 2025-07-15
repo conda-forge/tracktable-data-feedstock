@@ -15,10 +15,7 @@ source:
 build:
   noarch: python
   number: 1
-  script:
-    - git lfs install
-    - git lfs fetch
-    - "{{ PYTHON }} -m pip install . -vv"
+  script: build.sh
 
 
 requirements:
