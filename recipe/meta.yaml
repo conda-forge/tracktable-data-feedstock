@@ -17,7 +17,7 @@ build:
   number: 1
 
 requirements:
-  build:
+  host:
     - python {{ python_min }}
     - git
     - git-lfs
