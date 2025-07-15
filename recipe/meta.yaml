@@ -17,21 +17,23 @@ build:
   number: 1
 
 requirements:
-  host:
-    - python {{ python_min }}
-    - git
-    - git-lfs
-    - pip
-    - python-build
-    - setuptools
-  build:
+ build:
     - python
     - git
     - git-lfs
     - pip
     - python-build
     - setuptools
-  run:
+
+ host:
+    - python {{ python_min }}
+    - git
+    - git-lfs
+    - pip
+    - python-build
+    - setuptools
+
+ run:
     - python >={{ python_min }}
 
 test:
