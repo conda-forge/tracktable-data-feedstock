@@ -24,6 +24,13 @@ requirements:
     - pip
     - python-build
     - setuptools
+  build:
+    - python
+    - git
+    - git-lfs
+    - pip
+    - python-build
+    - setuptools
   run:
     - python >={{ python_min }}
 
