@@ -7,11 +7,14 @@
 # clones the repository before LFS is active so we need
 # to do that part manually.
 
+echo "--- Path:"
+echo $PATH
+
 echo "--- Running git lfs install"
-$BUILD_PREFIX/git lfs install
+git lfs install
 
 echo "--- Running git lfs fetch"
-$BUILD_PREFIX/git lfs fetch
+git lfs fetch
 
 echo "--- Running du"
 du $SRC_DIR
