@@ -1,5 +1,6 @@
 {% set name = "tracktable-data" %}
 {% set version = "1.7.3.1" %}
+{% set python_min = "3.9" %}
 
 package:
   name: {{ name|lower }}
@@ -19,14 +20,14 @@ build:
 
 requirements:
   build:
-    - python >=3.9
+    - python {{ python_min }}
     - git
     - git-lfs
     - pip
     - python-build
     - setuptools
   run:
-    - python >=3.9
+    - python >={{ python_min }}
 
 test:
   imports:
@@ -39,6 +40,7 @@ test:
     - python -c "from tracktable_data.data import retrieve; files = retrieve(); assert len(files) > 0"
   requires:
     - pip
+    - python {{ python_min }}
   commands:
     - pip check
 
