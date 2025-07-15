@@ -14,19 +14,26 @@ source:
 
 build:
   noarch: python
-  number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
-
+  number: 1
 
 requirements:
-  build:
+ build:
+    - python
+    - git
+    - git-lfs
+    - pip
+    - python-build
+    - setuptools
+
+ host:
     - python {{ python_min }}
     - git
     - git-lfs
     - pip
     - python-build
     - setuptools
-  run:
+
+ run:
     - python >={{ python_min }}
 
 test:
