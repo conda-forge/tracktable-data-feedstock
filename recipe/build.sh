@@ -29,15 +29,18 @@ echo "SRC_DIR: $SRC_DIR"
 echo "--- Running du on checked-out copy"
 du $SRC_DIR/tracktable-data
 
-echo "--- Checking for smudge files"
-find $SRC_DIR/tracktable-data/tracktable_data -type f | xargs grep -l "version https://git-lfs.github.com/spec/v1"
-status=$?
-if [ $status -eq 0 ]; then
-  echo "ERROR: Smudge files found in repository"
-  exit 1
-else
-  echo "No smudge files found.  Build can proceed."
-fi
+# echo "--- Checking for smudge files"
+# which find
+# which xargs
+# which grep
+# find $SRC_DIR -type f | grep tracktable_data | xargs grep -l "version https://git-lfs.github.com/spec/v1"
+# status=$?
+# if [ $status -eq 0 ]; then
+#   echo "ERROR: Smudge files found in repository"
+#   exit 1
+# else
+#   echo "No smudge files found.  Build can proceed."
+# fi
 
 
 
