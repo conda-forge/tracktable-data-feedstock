@@ -15,9 +15,34 @@ git lfs install
 
 echo "--- Running git lfs fetch"
 git lfs fetch
+git lfs pull
 
-echo "--- Running du"
-du $SRC_DIR
+#echo "--- Running du on whole repository"
+#du $SRC_DIR
+
+echo "--- Diagnostic information for where we are"
+echo "Current directory: $(pwd)"
+echo "SRC_DIR: $SRC_DIR"
+#echo "ls -R:"
+#ls -R
+
+echo "--- Running du on checked-out copy"
+du $SRC_DIR/tracktable-data
+
+# echo "--- Checking for smudge files"
+# which find
+# which xargs
+# which grep
+# find $SRC_DIR -type f | grep tracktable_data | xargs grep -l "version https://git-lfs.github.com/spec/v1"
+# status=$?
+# if [ $status -eq 0 ]; then
+#   echo "ERROR: Smudge files found in repository"
+#   exit 1
+# else
+#   echo "No smudge files found.  Build can proceed."
+# fi
+
+
 
 echo "--- Running pip install"
 $PYTHON -m pip install .
