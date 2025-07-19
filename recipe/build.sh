@@ -20,6 +20,11 @@ git lfs pull
 #echo "--- Running du on whole repository"
 #du $SRC_DIR
 
+echo "--- Diagnostic information for where we are"
+echo "Current directory: $(pwd)"
+echo "ls -R:"
+ls -R
+
 echo "--- Running du on checked-out copy"
 du $SRC_DIR/tracktable-data
 
