@@ -15,6 +15,7 @@ git lfs install
 
 echo "--- Running git lfs fetch"
 git lfs fetch
+git lfs pull
 
 #echo "--- Running du on whole repository"
 #du $SRC_DIR
