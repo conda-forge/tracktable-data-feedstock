@@ -22,6 +22,7 @@ git lfs pull
 
 echo "--- Diagnostic information for where we are"
 echo "Current directory: $(pwd)"
+echo "SRC_DIR: $SRC_DIR"
 echo "ls -R:"
 ls -R
 
