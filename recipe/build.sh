@@ -19,6 +19,14 @@ git lfs fetch
 echo "--- Running du"
 du $SRC_DIR
 
+echo "--- Checking for smudge files"
+find . -type f | xargs grep -l "version https://git-lfs.github.com/spec/v1"
+status=$?
+if [ $status -eq 0 ]; then
+  echo "ERROR: Smudge files found in repository"
+fi
+
+
 echo "--- Running pip install"
 $PYTHON -m pip install .
 
