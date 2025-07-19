@@ -21,10 +21,10 @@ git lfs pull
 #du $SRC_DIR
 
 echo "--- Running du on checked-out copy"
-du $SRC_DIR/\$SRC_DIR/tracktable-data
+du $SRC_DIR/tracktable-data
 
 echo "--- Checking for smudge files"
-find $SRC_DIR/\$SRC_DIR/tracktable-data -type f \
+find $SRC_DIR/tracktable-data -type f \
    | grep -v .git \
    | xargs grep -l "version https://git-lfs.github.com/spec/v1"
 status=$?
