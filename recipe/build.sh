@@ -35,7 +35,10 @@ status=$?
 if [ $status -eq 0 ]; then
   echo "ERROR: Smudge files found in repository"
   exit 1
+else
+  echo "No smudge files found.  Build can proceed."
 fi
+
 
 
 echo "--- Running pip install"
