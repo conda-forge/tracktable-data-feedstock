@@ -23,16 +23,14 @@ git lfs pull
 echo "--- Diagnostic information for where we are"
 echo "Current directory: $(pwd)"
 echo "SRC_DIR: $SRC_DIR"
-echo "ls -R:"
-ls -R
+#echo "ls -R:"
+#ls -R
 
 echo "--- Running du on checked-out copy"
 du $SRC_DIR/tracktable-data
 
 echo "--- Checking for smudge files"
-find $SRC_DIR/tracktable-data -type f \
-   | grep -v .git \
-   | xargs grep -l "version https://git-lfs.github.com/spec/v1"
+find $SRC_DIR/tracktable-data/tracktable_data -type f | xargs grep -l "version https://git-lfs.github.com/spec/v1"
 status=$?
 if [ $status -eq 0 ]; then
   echo "ERROR: Smudge files found in repository"
